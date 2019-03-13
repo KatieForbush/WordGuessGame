@@ -15,12 +15,13 @@ function secretWord(){
 }
 function letterPressed(){
     //if letter pressed is correct then put it on the screen and put it in the already used area
+    if (onkeypress == secretWord.length
     var letter = (" ")
     //if (letter = true);
 
 }
-
-//<input type="text" onkeypress="myFunction()"></input>
+//console.log(words)
+//
 }
 
 // Show lives
