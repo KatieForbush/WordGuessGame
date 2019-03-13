@@ -2,10 +2,23 @@ window.onload = function () {
 
 var word ;              // Selected word
 var guess ;             // Geuss
-var geusses = [ ];      // Stored geusses
+var guesses = [ ];      // Stored geusses
 var lives ;             // Lives
 var counter ;           // Count correct geusses
 var space;              // Number of spaces in word
+
+//array of secret words
+var words = ["galaxy", "heart", "coffee", "travel"];
+
+function secretWord(){
+    return secretWord[Math.floor(math.random()*words.length)];
+}
+function letterPressed(){
+    //if letter pressed is correct then put it on the screen and put it in the already used area
+    var letter = (" ")
+    //if (letter = true);
+
+}
 
 //<input type="text" onkeypress="myFunction()"></input>
 }
@@ -16,24 +29,17 @@ comments = function () {
     if (lives < 1) {
       showLives.innerHTML = "Game Over";
     }
-    for (var i = 0; i < geusses.length; i++) {
-      if (counter + space === geusses.length) {
+    for (var i = 0; i < guesses.length; i++) {
+      if (counter + space === guesses.length) {
         showLives.innerHTML = "You Win!";
       }
     }
   }
-var words = ["galaxy", "heart", "coffee", "travel"];
-function secretWord()
-    return secretWord[Math.floor(math.random()*words.length]
+
 
 //<input type="test" onkeypress="letterPressed"></input>
 
-function letterPressed(){
-    //if letter pressed is correct then put it on the screen and put it in the already used area
-    var letter = (" ")
-    //if (letter = true);
 
-}
 //console.log(words)
 //var word = words[Math.floor(Math.random() * words.length)];
 
