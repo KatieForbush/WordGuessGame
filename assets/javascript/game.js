@@ -16,13 +16,13 @@ function secretWord(){
 function letterPressed(){
     //if letter pressed is correct then put it on the screen and put it in the already used area
     if (onkeypress == secretWord.length
-    var letter = (" ")
+    //var letter = (" ")
     //if (letter = true);
 
-}
+//}
 //console.log(words)
 //
-}
+//}
 
 // Show lives
 comments = function () {
