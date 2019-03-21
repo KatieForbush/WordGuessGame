@@ -1,4 +1,5 @@
-let theWordToGuess = "pizza";
+let wordBank = ["worm", "apple", "bunny"];
+let theWordToGuess = wordBank[Math.floor(Math.random()*wordBank.length)];
 let maxNumberOfGuesses = 10;
 let currentNumberOfGuesses = 0;
 let usedCharactersEl = document.getElementById('used-characters');
@@ -7,21 +8,24 @@ let attemptedCharacters = [];
 let displayCharacters = [];
 
 //initalize successList to 0
-
+window.onload = function() {
+    
 for (let i = 0; i < theWordToGuess.length; i++) {
     displayCharacters.push("_");
 }
+blanksEl.innerHTML = displayCharacters.join(' ');
+
 window.onkeypress = function(event) {
     let key = event.key;
 
     if (!attemptedCharacters.includes(key)) {
         attemptedCharacters.push(key);
     }
-    usedCharactersEl.innerHTML = attemptedCharacters.toString();
+    usedCharactersEl.innerHTML = attemptedCharacters.join(",");
 
     currentNumberOfGuesses++;
     if (currentNumberOfGuesses > maxNumberOfGuesses) {
-        console.log("YOU LOST");
+        alert("YOU LOST");
     }
 
     for (let i = 0; i < theWordToGuess.length; i++) {
@@ -29,7 +33,7 @@ window.onkeypress = function(event) {
             displayCharacters[i] = theWordToGuess[i];
         }
     }
-
+    
     blanksEl.innerHTML = displayCharacters.join(' ');
 
     // if (keys.hasOwnProperty(key)) {
@@ -45,3 +49,4 @@ window.onkeypress = function(event) {
 //     if (keys.hasOwnProperty(theWordToGuess))
 //     //console.log(keys);   
 };
+}
